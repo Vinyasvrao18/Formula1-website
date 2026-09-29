@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formula 1 Rules Overview</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: url('https://th.bing.com/th/id/R.7586640509d29c7af41a4ce4baf6eb13?rik=jyqjje0mDijKWQ&pid=ImgRaw&r=0') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 8px rgba(255, 0, 0, 0.7);
+        }
+
+        .menu-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            z-index: 1000;
+        }
+        .menu-button:hover{
+            background-color:rgb(207, 75, 75);
+            transform:scale(1.05);
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: red;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 25px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .rule-section {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            max-width: 800px;
+            box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.7);
+        }
+
+        h2 {
+            color: red;
+            text-transform: uppercase;
+            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid red;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgba(255, 0, 0, 0.8);
+            color: white;
+            text-transform: uppercase;
+        }
+
+        td {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-text {
+            margin-top: 40px;
+            font-size: 1.2rem;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(255, 0, 0, 0.8);
+        }
+    </style>
+
+    <script>
+        function openMenu() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeMenu() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+    </script>
+</head>
+<body>
+    <button class="menu-button" onclick="openMenu()">☰ Menu</button>
+    
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+        <a href="trial3.html">Home</a>
+        <a href="3dmodel.html">3D Model</a>
+        <a href="tracks.html">Races</a>
+        <a href="teams.html">Teams</a>
+        <a href="drivers.html">Drivers</a>
+        <a href="rules.html">Rules</a>
+        <a href="about.html">About</a>
+    </div>
+
+    <h1>Formula 1 Racing Rules Overview</h1>
+
+    <div class="rule-section">
+        <h2>Points System</h2>
+        <table>
+            <tr><th>Position</th><th>Points</th></tr>
+            <tr><td>1st</td><td>25</td></tr>
+            <tr><td>2nd</td><td>18</td></tr>
+            <tr><td>3rd</td><td>15</td></tr>
+            <tr><td>4th</td><td>12</td></tr>
+            <tr><td>5th</td><td>10</td></tr>
+            <tr><td>6th</td><td>8</td></tr>
+            <tr><td>7th</td><td>6</td></tr>
+            <tr><td>8th</td><td>4</td></tr>
+            <tr><td>9th</td><td>2</td></tr>
+            <tr><td>10th</td><td>1</td></tr>
+            <tr><td>Fastest Lap</td><td>1 (if within top 10)</td></tr>
+        </table>
+    </div>
+
+    <div class="rule-section">
+        <h2>Qualifying</h2>
+        <table>
+            <tr><th>Stage</th><th>Description</th></tr>
+            <tr><td>Q1</td><td>All drivers participate, slowest are eliminated</td></tr>
+            <tr><td>Q2</td><td>Remaining drivers compete, more are eliminated</td></tr>
+            <tr><td>Q3</td><td>Top 10 battle for pole position</td></tr>
+        </table>
+    </div>
+
+    <div class="rule-section">
+        <h2>Race Regulations</h2>
+        <table>
+            <tr><th>Rule</th><th>Description</th></tr>
+            <tr><td>Safety Car (SC)</td><td>Neutralizes the race during incidents</td></tr>
+            <tr><td>Virtual Safety Car (VSC)</td><td>Limits speed without a physical car</td></tr>
+            <tr><td>Pit Stops</td><td>Mandatory tire changes, strategic element</td></tr>
+            <tr><td>Overtaking</td><td>Must be done safely within track limits</td></tr>
+            <tr><td>Penalties</td><td>Time penalties, grid penalties for infractions</td></tr>
+            <tr><td>Flags</td><td>Signals track conditions & warnings</td></tr>
+            <tr><td>Track Limits</td><td>Drivers must stay within designated track boundaries</td></tr>
+        </table>
+    </div>
+
+    <p class="footer-text">For the most up-to-date details, visit the official Formula 1 website and FIA regulations.</p>
+</body>
+</html>

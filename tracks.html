@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Races & Tracks</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+        body {
+            font-family: 'Orbitron', sans-serif;
+            margin: 20px;
+            background-image: url('https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/t_16by9Centre/f_auto/q_auto/fom-website/2025/Miscellaneous/GettyImages-1285764508.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            font-weight: bold;
+            color:white;
+        }
+        p{color:black}
+
+        b1,body1 {
+            font-family: 'Orbitron', sans-serif;
+            margin: 20px;
+            background-image: url('https://media.formula1.com/image/upload/f_auto,c_limit,w_1440,q_auto/t_16by9Centre/f_auto/q_auto/fom-website/2025/Miscellaneous/GettyImages-1285764508.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color:white;
+        }
+
+        b2,h1, h2 {background-color: rgba(0, 0, 0, 0.7);
+            color: #ff0000;
+            padding: 3rem 0;
+            text-align: center;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: black;
+        }
+        .img-track {
+            max-width: 300px;
+            height: auto;
+        }
+        
+        .menu-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            z-index: 1000;
+        }
+        .menu-button:hover{
+            background-color:rgb(207, 75, 75);
+            transform:scale(1.05);
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: red;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 25px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formula 1 Races & Tracks</h1>
+</body><body1>
+    <button class="menu-button" onclick="openMenu()">☰ Menu</button>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+        <a href="trial3.html">Home</a>
+        <a href="3dmodel.html">3D Model</a>
+        <a href="tracks.html">Races</a>
+        <a href="teams.html">Teams</a>
+        <a href="drivers.html">Drivers</a>
+        <a href="rules.html">Rules</a>
+        <a href="about.html">About</a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>Race</th>
+                <th>Track</th>
+                <th>Location</th>
+                <th>Track Image</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>Bahrain Grand Prix</td>
+                <td>Bahrain International Circuit</td>
+                <td>Sakhir, Bahrain</td>
+                <td><img class="img-track" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxSCXBFNff0OU4giUbneCryDo7IB-8LWaHGw&s" alt="Bahrain International Circuit"></td>
+            </tr>
+            <tr>
+                <td>Saudi Arabian Grand Prix</td>
+                <td>Jeddah Corniche Circuit</td>
+                <td>Jeddah, Saudi Arabia</td>
+                <td><img class="img-track" src="https://cdn-imgix.headout.com/media/images/f6e5f9a7833b5001a375d74cb9cf7bd5-general%20Admission.png?auto=format&q=90&fit=crop&crop=faces" alt="Jeddah Corniche Circuit"></td>
+            </tr>
+            <tr>
+                <td>Australian Grand Prix</td>
+                <td>Albert Park Circuit</td>
+                <td>Melbourne, Australia</td>
+                <td><img class="img-track" src="https://punditfeed.com/wp-content/uploads/2023/03/albert-park-f1-australian-gp-layout.jpg" alt="Albert Park Circuit"></td>
+            </tr>
+             <tr>
+                <td>Japanese Grand Prix</td>
+                <td>Suzuka International Racing Course</td>
+                <td>Suzuka, Japan</td>
+                <td><img class="img-track" src="https://tse3.mm.bing.net/th/id/OIP.guWDCQRKpaB04FN5wb5BnAHaEK?rs=1&pid=ImgDetMain" alt="Suzuka International Racing Course"></td>
+            </tr>
+            <tr>
+                <td>Chinese Grand Prix</td>
+                <td>Shanghai International Circuit</td>
+                <td>Shanghai, China</td>
+                <td><img class="img-track" src="https://tse4.mm.bing.net/th/id/OIP.ZI5Paj-o9mDf3F7otqY_egHaEK?rs=1&pid=ImgDetMain" alt="Shanghai International Circuit"></td>
+            </tr>
+            <tr>
+                <td>Miami Grand Prix</td>
+                <td>Miami International Autodrome</td>
+                <td>Miami Gardens, Florida, USA</td>
+                <td><img class="img-track" src="https://storage.googleapis.com/fp-media/1/2022/05/Miami_Track_Map_circuit.jpg" alt="Miami International Autodrome"></td>
+            </tr>
+            <tr>
+                <td>Emilia Romagna Grand Prix</td>
+                <td>Imola Circuit (Autodromo Enzo e Dino Ferrari)</td>
+                <td>Imola, Italy</td>
+                <td><img class="img-track" src="https://www.motorydominio.com.mx/virtual/wp-content/uploads/2021/04/cirimola.jpg" alt="Imola Circuit"></td>
+            </tr>
+            <tr>
+                <td>Monaco Grand Prix</td>
+                <td>Circuit de Monaco</td>
+                <td>Monte Carlo, Monaco</td>
+                <td><img class="img-track" src="https://tse3.mm.bing.net/th/id/OIP.F9ciEUNk1GZipPbZ_j1RdQHaEK?rs=1&pid=ImgDetMain" alt="Circuit de Monaco"></td>
+            </tr>
+            <tr>
+                <td>Canadian Grand Prix</td>
+                <td>Circuit Gilles Villeneuve</td>
+                <td>Montreal, Canada</td>
+                <td><img class="img-track" src="https://f1-gate.com/media/img2023/20230614-canada_circuit.jpg" alt="Circuit Gilles Villeneuve"></td>
+            </tr>
+            <tr>
+                <td>Spanish Grand Prix</td>
+                <td>Circuit de Barcelona-Catalunya</td>
+                <td>Montmeló, Spain</td>
+                <td><img class="img-track" src="https://indiaongo.in/wp-content/uploads/2022/05/circuit-de-barcelona-catalunya-track-map.jpg" alt="Circuit de Barcelona-Catalunya"></td>
+            </tr>
+             <tr>
+                <td>Austrian Grand Prix</td>
+                <td>Red Bull Ring</td>
+                <td>Spielberg, Austria</td>
+                <td><img class="img-track" src="https://cdn.images.express.co.uk/img/dynamic/73/590x/secondary/Austrian-Grand-Prix-1937399.jpg?r=1561899057784" alt="Red Bull Ring"></td>
+            </tr>
+            <tr>
+                <td>British Grand Prix</td>
+                <td>Silverstone Circuit</td>
+                <td>Silverstone, United Kingdom</td>
+                <td><img class="img-track" src="https://images.daznservices.com/di/library/DAZN_News/98/97/gp-gran-bretana-silverstone-formula-1_dt6k7j6rsv581l0s95h8v31fh.jpg?t=-1438907127" alt="Silverstone Circuit"></td>
+            </tr>
+            <tr>
+                <td>Hungarian Grand Prix</td>
+                <td>Hungaroring</td>
+                <td>Mogyoród, Hungary</td>
+                <td><img class="img-track" src="https://image.shutterstock.com/shutterstock/photos/1236846025/display_1500/stock-vector-hungaroring-hungarian-grand-prix-circuit-vector-illustration-of-an-race-track-1236846025.jpg" alt="Hungaroring"></td>
+            </tr>
+            <tr>
+                <td>Belgian Grand Prix</td>
+                <td>Circuit de Spa-Francorchamps</td>
+                <td>Spain, Belgium</td>
+                <td><img class="img-track" src="https://tse1.mm.bing.net/th/id/OIP.NvaDxJVyX5gNVVdgc_pKDQHaEK?rs=1&pid=ImgDetMain" alt="Circuit de Spa-Francorchamps"></td>
+            </tr>
+            <tr>
+                <td>Dutch Grand Prix</td>
+                <td>Circuit Zandvoort</td>
+                <td>Zandvoort, Netherlands</td>
+                <td><img class="img-track" src="https://tse4.mm.bing.net/th/id/OIP.cnjHIDQMbvF2-bZJ75UeKAHaEK?rs=1&pid=ImgDetMain" alt="Circuit Zandvoort"></td>
+            </tr>
+            <tr>
+                <td>Italian Grand Prix</td>
+                <td>Monza Circuit</td>
+                <td>Monza, Italy</td>
+                <td><img class="img-track" src="https://images.daznservices.com/di/library/DAZN_News/eb/98/monza-gp-italia-gran-premio-de-italia-formula-1-f1_6ig2wzyt5ppl1i7uyv8q0dxpg.jpg?t=314989067" alt="Monza Circuit"></td>
+            </tr>
+            <tr>
+                <td>Azerbaijan grand prix</td>
+                <td>Baka City Circuit</td>
+                <td>Baku,Azerbaijan</td>
+                <td><img class="img-track" src="https://tse1.mm.bing.net/th/id/OIP.lN9iJ9uTBHlPW5pS948e5gHaEK?rs=1&pid=ImgDetMain" alt="Baku City Circuit"></td>
+            </tr>
+            <tr>
+                <td>Singapore Grand Prix</td>
+                <td>Marine Bay Street Circuit</td>
+                <td>Marine bay,Singapore</td>
+                <td><img class="img-track" src="https://live.staticflickr.com/65535/50839640332_e0af47d3e0_c.jpg" alt="Marine Bay "></td>
+            </tr>
+            <tr>
+                <td>United States Grand Prix</td>
+                <td>Circuit of the Americas</td>
+                <td>Austin,Texes</td>
+                <td><img class="img-track" src="https://tse1.mm.bing.net/th?q=circuit%20of%20the%20americas%20map%20austin%20your%20ultimate%20guide%20to%20the%20iconic%20race%20track&amp;w=474&amp;h=274&amp;c=7" class="gb-image-6039f395 ddimage" alt="Circuit of Americas "></td>
+            </tr>
+            <tr>
+                <td>Mexico City Grand Prix</td>
+                <td>Autódromo Hermanos Rodríguez</td>
+                <td>Mexico City,Mexico</td>
+                <td><img class="img-track" src="https://live.staticflickr.com/65535/50919403046_e1e049ae8c_c.jpg" alt="Autódromo Hermanos Rodríguez"></td>
+            </tr>
+            <tr>
+                <td>São Paulo Grand Prix</td>
+                <td>Interlagos Circuit</td>
+                <td>São Paulo,Brazil</td>
+                <td><img class="img-track" src="https://wol.su/uploads/posts/2022-08/1659773524_f1-22-brazil-sao-paulo-interlagos-grand-prix-circuit-car-setup-track.jpg" alt="Interlagos Circuit"></td>
+            </tr>
+            <tr>
+                <td>Las Vegas Grand Prix</td>
+                <td>Las Vegas Strip Circuit</td>
+                <td>Nevada,United States</td>
+                <td><img class="img-track" src="https://tse3.mm.bing.net/th/id/OIP.sayyHB3n-m1OCwSg6-v67wHaEY?rs=1&pid=ImgDetMain" alt="Las Vegas Strip Circuit"></td>
+            </tr>
+            <tr>
+                <td>Qatar Grand Prix</td>
+                <td>Lusail International Circuit</td>
+                <td>Lusai,Qatar</td>
+                <td><img class="img-track" src="https://d1uzk9o9cg136f.cloudfront.net/f/16783018/rc/2021/11/17/670990e13297d76158b0ba72594471ba851d1ec6.jpg" alt="Lusail International Circuit"></td>
+            </tr>
+            <tr>
+                <td>Abu Dhabi Grand Prix</td>
+                <td>Yas Marina Circuit</td>
+                <td>Abu Dhabi,United Arab Emirates</td>
+                <td><img class="img-track" src="https://live.staticflickr.com/65535/50706611817_45c57d3aec_c.jpg" alt="Yas Marina Circuit"></td>
+            </tr>
+        </tbody>
+    </table>
+    <p> Please note that the specific races and order can vary from year to year. For the most up to date information, please check the official F1 website.</p>
+</body1>
+<script>
+    function navigateTo(page) {
+        window.location.href = page;
+    }
+
+    function openMenu() {
+        document.getElementById("sidebar").style.width = "250px";
+    }
+
+    function closeMenu() {
+        document.getElementById("sidebar").style.width = "0";
+    }
+</script>
+</html>

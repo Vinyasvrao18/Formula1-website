@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 Teams & Drivers</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+        
+        body {
+        font-family: 'Orbitron', sans-serif;
+        margin: 0;
+        background: url('https://wallpapercave.com/wp/wp3607781.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    header {
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 2rem 0;
+        font-size: 2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .teams-container {
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .team-card {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px red;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition:transform .15s ease-in;
+    }
+    .team-card:hover{
+        transform:scale(1.03);
+    }
+
+     .team-name {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: red;
+        margin-bottom: 10px;
+    }
+
+    .driver-list {
+        list-style: none;
+        padding: 0;
+        width: 100%;
+    }
+
+    .driver-list li {
+        margin: 20px 0;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .driver-img {
+        width: 150px;
+        height: auto;
+        border-radius: 10px;
+        margin-right: 10px;
+        filter:drop-shadow(#FFFFFF);
+    }
+
+    .helmet-img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .flag-img {
+        width: 50px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    footer {
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 1rem;
+        margin-top: 20px;
+    }
+
+    .menu-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: black;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            z-index: 1000;
+        }
+        .menu-button:hover{
+            background-color:rgb(207, 75, 75);
+            transform:scale(1.05);
+        }
+
+    .sidebar {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        overflow-x: hidden;
+        transition: 0.3s;
+        padding-top: 60px;
+    }
+
+    .sidebar a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+        background-color: red;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 25px;
+        color: white;
+        cursor: pointer;
+    }
+
+    </style>
+     <script>
+        function navigateTo(page) {
+            window.location.href = page;
+        }
+
+        function openMenu() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
+
+        function closeMenu() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+    </script>
+</head>
+
+<body>
+    <button class="menu-button" onclick="openMenu()">☰ Menu</button>
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeMenu()">&times;</a>
+        <a href="trial3.html">Home</a>
+        <a href="3dmodel.html">3D Model</a>
+        <a href="tracks.html">Races</a>
+        <a href="teams.html">Teams</a>
+        <a href="drivers.html">Drivers</a>
+        <a href="rules.html">Rules</a>
+        <a href="about.html">About</a>
+    </div>
+    <header>F1 Teams & Drivers</header>
+
+    <section class="teams-container">
+        <div class="team-card">
+            <div class="team-name">Scuderia Ferrari</div>
+            <ul class="driver-list">
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/C/CHALEC01_Charles_Leclerc/chalec01.png" alt="Charles Leclerc" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/leclerc" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/Monaco.jpg" alt="Flag" class="flag-img">
+                    Charles Leclerc   #16
+                </li>
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LEWHAM01_Lewis_Hamilton/lewham01.png" alt="Lewis Hamilton" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/hamilton" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/United%20Kingdom.jpg" alt="Flag" class="flag-img">
+                    Lewis Hamilton  #44
+                </li>
+            </ul>
+        </div>
+        <div class="team-card">
+            <div class="team-name">Mercedes AMG Petronas</div>
+            <ul class="driver-list">
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/A/ANDANT01_Andrea%20Kimi_Antonelli/andant01.png" alt="Andrea Kimi Antonelli" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/antonelli" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/Italy.jpg" alt="Flag" class="flag-img">
+                    Andrea Kimi Antonelli  #12
+                </li>
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/G/GEORUS01_George_Russell/georus01.png" alt="George Russell" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/russell" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/United%20Kingdom.jpg" alt="Helmet" class="flag-img">
+                    George Russell  #63
+                </li>
+            </ul>
+        </div>
+
+        <div class="team-card">
+            <div class="team-name">Red Bull Racing</div>
+            <ul class="driver-list">
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/M/MAXVER01_Max_Verstappen/maxver01.png" alt="Max Verstappen" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/verstappen" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/Netherlands.jpg" alt="Flag" class="flag-img">
+                    Max Verstappen  #1
+                </li>
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LIALAW01_Liam_Lawson/lialaw01.png" alt="Liam Lawson" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/lawson" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/image/upload/content/dam/fom-website/2018-redesign-assets/Flags%2016x9/new-zealand-flag.png" alt="Flag" class="flag-img">
+                    Liam Lawson  #30
+                </li>
+            </ul>
+        </div>
+
+        <div class="team-card">
+            <div class="team-name">Kick Sauber Motorsports</div>
+            <ul class="driver-list">
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/N/NICHUL01_Nico_Hulkenberg/nichul01.png" alt="Nico Hulkenberg" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/hulkenberg" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/Germany.jpg" alt="Helmet" class="flag-img">
+                    Nico Hulkenberg  #27
+                </li>
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/G/GABBOR01_Gabriel_Bortoleto/gabbor01.png" alt="Gabriel Bortoleto" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/bortoleto" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/Brazil.jpg" alt="Flag" class="flag-img">
+                    Gabriel Bortoleto  #5
+                </li>
+            </ul>
+        </div>
+        <div class="team-card">
+            <div class="team-name">McLaren F1 Team</div>
+            <ul class="driver-list">
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LANNOR01_Lando_Norris/lannor01.png" alt="Lando Norris" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/norris" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/United%20Kingdom.jpg" alt="Flag" class="flag-img">
+                    Lando Norris  #4
+                </li>
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/O/OSCPIA01_Oscar_Piastri/oscpia01.png" alt="Oscar Piastri" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/piastri" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/Australia.jpg" alt="Helmet" class="flag-img">
+                    Oscar Piastri  #81
+                </li>
+            </ul>
+        </div> <div class="team-card">
+            <div class="team-name">Haas F1 Team</div>
+            <ul class="driver-list">
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/O/OLIBEA01_Oliver_Bearman/olibea01.png" alt="Oliver Bearman" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/bearman" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/United%20Kingdom.jpg" alt="Flag" class="flag-img">
+                    Oliver Bearman  #87
+                </li>
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/E/ESTOCO01_Esteban_Ocon/estoco01.png" alt="Esteban Ocon" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/ocon" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/France.jpg" alt="Flag" class="flag-img">
+                    Esteban Ocon  #31
+                </li>
+            </ul>
+        </div>
+        <div class="team-card">
+            <div class="team-name">Alpine</div>
+            <ul class="driver-list">
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/P/PIEGAS01_Pierre_Gasly/piegas01.png" alt="Pierre Gasly" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/gasly" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/France.jpg" alt="Flag" class="flag-img">
+                    Pierre Gasly  #10
+                </li>
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/J/JACDOO01_Jack_Doohan/jacdoo01.png" alt="Oscar Piastri" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/doohan" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/Australia.jpg" alt="Flag" class="flag-img">
+                    Jack Doohan  #7
+                </li>
+            </ul>
+        </div>
+        <div class="team-card">
+            <div class="team-name">Racing Bulls</div>
+            <ul class="driver-list">
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/Y/YUKTSU01_Yuki_Tsunoda/yuktsu01.png" alt="Yuki Tsunoda" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/tsunoda" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/Japan.jpg" alt="Flag" class="flag-img">
+                    Yuki Tsunoda  #22
+                </li>
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/I/ISAHAD01_Isack_Hadjar/isahad01.png" alt="Isack Hadjar" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/hadjar" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/France.jpg" alt="Flag" class="flag-img">
+                    Isack Hadjar  #6
+                </li>
+            </ul>
+        </div><div class="team-card">
+            <div class="team-name">Williams</div>
+            <ul class="driver-list">
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/A/ALEALB01_Alexander_Albon/alealb01.png" alt="Alex Albon" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/albon" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/Thailand.jpg" alt="Flag" class="flag-img">
+                    Alex Albon  #23
+                </li>
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/C/CARSAI01_Carlos_Sainz/carsai01.png" alt="Carlos Sainz" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/sainz" alt="Carlos Sainz" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/Spain.jpg" alt="Flag" class="flag-img">
+                    Carlos Sainz  #55
+                </li>
+            </ul>
+        </div>
+        <div class="team-card">
+            <div class="team-name">Aston Martin</div>
+            <ul class="driver-list">
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/F/FERALO01_Fernando_Alonso/feralo01.png" alt="Fernando Alonso" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/alonso" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/Spain.jpg" alt="Flag" class="flag-img">
+                    Fernando Alonso  #14
+                </li>
+                <li>
+                    <img src="https://media.formula1.com/d_driver_fallback_image.png/content/dam/fom-website/drivers/L/LANSTR01_Lance_Stroll/lanstr01.png" alt="Lance Stroll" class="driver-img">
+                    <img src="https://media.formula1.com/image/upload/f_auto,c_limit,q_auto,w_1024/fom-website/manual/Helmets2025/stroll" alt="Helmet" class="helmet-img">
+                    <img src="https://media.formula1.com/d_default_fallback_image.png/content/dam/fom-website/flags/Canada.jpg" alt="Flag" class="flag-img">
+                    Lance Stroll  #18
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        &copy; @Vinyas V Rao
+    </footer>
+</body>
+
+</html>
